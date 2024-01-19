@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
 
   title1:{
     backgroundColor:'#FFB74D',
-    fontSize: '14',
+    fontSize: '12',
   },
   title2:{
     backgroundColor:'#FFB74D',
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     fontSize: '10',
     fontWeight: '400',
     padding: '0',
-    lineHeight:'1.6',
+    lineHeight:'1.4',
   },
   logoImages:{
     width: '180',
@@ -135,11 +135,15 @@ const styles = StyleSheet.create({
     width:'200px',
   },
   description1:{
-    fontSize: '12',
-    padding: '5',
+    fontSize: '10',
+    padding: '2',
   },
-
-
+  paddingx:{
+    paddingHorizontal:'5',     
+  },
+  paddingy:{
+    paddingVertical:'5',     
+  },
 
 });
 
@@ -157,9 +161,9 @@ const Header = () => {
         
         <View style={[styles.head2, styles.border ]}>
             <View style={[styles.head2_con1]}>
-              <Text style={[styles.title, styles.title1]}>PROMECH INDUSTRIES PRIVATE LIMITED</Text>
-              <Text style={[styles.description]}>7/237 A, Pattanam to Peedampalli Main Road, Nagamanaickenpalayam,{'\n'} Coimbatore - 641016, Tamil Nadu, India.</Text>
-               <Text style={[styles.description]}>Cell : +91 99943 99996 | +91 99943 99006  {'\n'} Email : promech5@yahoo.co.in | Web: www.marksorter.com </Text>
+              <Text style={[styles.title, styles.title1, styles.paddingy]}>PROMECH INDUSTRIES PRIVATE LIMITED</Text>
+              <Text style={[styles.description, styles.paddingx]}>7/237 A, Pattanam to Peedampalli Main Road, Nagamanaickenpalayam,{'\n'} Coimbatore - 641016, Tamil Nadu, India.</Text>
+               <Text style={[styles.description, styles.paddingx]}>Cell : +91 99943 99996 | +91 99943 99006  {'\n'} Email : promech5@yahoo.co.in | Web: www.marksorter.com </Text>
             </View>
             <View style={[styles.head2_con2]}>
                 <Image src={logoImage} style={[styles.image, styles.logoImages]} />
@@ -170,8 +174,8 @@ const Header = () => {
 
             <View style={[styles.head2_con1]}>
               <Text style={[styles.title2]}>BILLING ADDRESS</Text>
-              <Text style={[styles.description]}>M/S ALVS VENTURES{'\n'}PATTAVAYAL, NELLAKOTTAI THE NILGIRIS,{'\n'}DINDUGAL -643240, TAMILNADU</Text>
-              <Text style={[styles.description]}>Phone No : 9487345175      Email Id : alvsventures@gmail.com </Text>
+              <Text style={[styles.description, styles.paddingx]}>M/S ALVS VENTURES{'\n'}PATTAVAYAL, NELLAKOTTAI THE NILGIRIS,{'\n'}DINDUGAL -643240, TAMILNADU</Text>
+              <Text style={[styles.description, styles.paddingx]}>Phone No : 9487345175      Email Id : alvsventures@gmail.com </Text>
             </View>
 
             <View style={[styles.table]}>

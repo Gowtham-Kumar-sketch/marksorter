@@ -8,7 +8,7 @@ const border = '#F0F0F0';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 16,
+    paddingTop: 0,
     '@media max-width: 400': {
       paddingTop: 10,
       paddingLeft: 0
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   tableHeader: {
     justifyContent: 'space-between',
     margin: 0,
-    paddingLeft: 10
+    paddingLeft: 0
   },
 
   tableRow: {
@@ -128,12 +128,24 @@ const styles = StyleSheet.create({
     
   },
   title4:{
-    fontSize: '11px',
+    fontSize: '10px',
     lineHeight:'1.6', 
   },
   title5:{
     fontSize: '10px',
     lineHeight:'1.6', 
+    paddingTop: '4px',
+  },
+  text_right:{
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems:'flex-end',
+    alignContent: 'flex-end',
+  },
+  box:{
+    border: '1px solid #d4d4d4',
+    width: '100',
+    height: '40',
   },
   
 
@@ -144,8 +156,10 @@ const styles = StyleSheet.create({
   pb5: { paddingBottom: 5 },
   flex03: { flex: '0.3 1 0px' },
   flex07: { flex: '0.7 1 0px' },
+  flex06: { flex: '0.6 1 0px' },
   flex17: { flex: '1.7 1 0px' },
   flex20: { flex: '2 1 0px' },
+  flex25: { flex: '2.5 1 0px' },
   flex100: { flex: '10 1 0px' }
 });
 const Content = () => {
@@ -177,7 +191,7 @@ const Content = () => {
         <View style={[styles.row, styles.tableHeader]}>
           <Text style={[styles.tableTitle, styles.flex03]}>SNo</Text>
           <Text style={[styles.tableTitle, styles.flex20]}>DESCRIPTION</Text>
-          <Text style={[styles.tableTitle, styles.flex07]}>HSN</Text>
+          <Text style={[styles.tableTitle, styles.flex06]}>HSN</Text>
           <Text style={[styles.tableTitle, styles.flex07]}>QTY</Text>
           <Text style={[styles.tableTitle, styles.flex07]}>PRICE</Text>
           <Text style={[styles.tableTitle, styles.flex07]}>AMOUNT</Text>
@@ -185,16 +199,16 @@ const Content = () => {
       
         <View style={[styles.row, styles.tableRow]} >
             <Text style={[styles.tableCell, styles.flex03]}>1</Text>
-            <Text style={[styles.tableCell, styles.flex20]}>Machine for Sorting used in Milling Industry - Spices{'\n'} Model – Mini sorter Commonder -1 CHUTE- 1F-32G-1CT-MX-P-1MS{'\n'} ( Image Scanning Process Technology )</Text>
-            <Text style={[styles.tableCell, styles.flex07]}>84371000</Text>
+            <Text style={[styles.tableCell, styles.flex20]}>Machine for Sorting used in Milling Industry Spices{'\n'} Model Mini sorter Commonder -1 CHUTE- 1F-32G-1CT-MX-P-1MS</Text>
+            <Text style={[styles.tableCell, styles.flex06]}>84371000</Text>
             <Text style={[styles.tableCell, styles.flex07]}>1</Text>
             <Text style={[styles.tableCell, styles.flex07]}>700000.00</Text>
             <Text style={[styles.tableCell, styles.flex07]}>700000.00</Text>
         </View>
         <View style={[styles.row, styles.tableRow]} >
             <Text style={[styles.tableCell, styles.flex03]}>1</Text>
-            <Text style={[styles.tableCell, styles.flex20]}>Machine for Sorting used in Milling Industry - Spices{'\n'} Model – Mini sorter Commonder -1 CHUTE- 1F-32G-1CT-MX-P-1MS{'\n'} ( Image Scanning Process Technology )</Text>
-            <Text style={[styles.tableCell, styles.flex07]}>84371000</Text>
+            <Text style={[styles.tableCell, styles.flex20]}>Machine for Sorting used in Milling Industry Spices</Text>
+            <Text style={[styles.tableCell, styles.flex06]}>84371000</Text>
             <Text style={[styles.tableCell, styles.flex07]}>1</Text>
             <Text style={[styles.tableCell, styles.flex07]}>700000.00</Text>
             <Text style={[styles.tableCell, styles.flex07]}>700000.00</Text>
@@ -239,7 +253,7 @@ const Content = () => {
 
         <View style={[styles.bnk_det_tab2, styles.border]}>
 
-            <View style={[styles.row, { paddingTop: 25, margin: 0, paddingRight: 2, justifyContent: 'right', alignItems: 'right'  }]}>
+            <View style={[styles.row, { paddingTop: 25, margin: 0, paddingRight: 2, justifyContent: 'flex-end', alignItems: 'flex-end'  }]}>
                 <View style={[styles.row, styles.amountRow]}>
                 <Text style={styles.caption}>Sub Total:</Text>
                 <Text style={styles.tableCell}>324354354</Text>
@@ -348,7 +362,7 @@ StorageHopper, Dust Collecting System and others are Customer's Scope.</Text>
 
         <View style={[styles.signature2, styles.text_right]} >
           <Text style={styles.title4}>For PROMECH INDUSTRIES PRIVATE LIMITED</Text>
-          
+          <Text style={styles.box}></Text>
           <Text style={styles.title5}>Authorized Signatory</Text>
         </View>
         
